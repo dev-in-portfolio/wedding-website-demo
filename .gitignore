@@ -1,0 +1,13 @@
+node_modules
+dist
+.DS_Store
+*.local
+
+# Local Netlify folder
+.netlify
+
+# Verification and audit scripts
+verify_*.js
+audit_*.js
+comprehensive_*.js
+*.png

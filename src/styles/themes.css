@@ -1,0 +1,325 @@
+﻿/**
+ * Five Distinct Visual Directions (Styles)
+ */
+
+/* ==========================================================================
+   STYLE 1: COASTAL EDITORIAL (Default)
+   Aesthetic: Sophisticated Charleston editorial with coastal restraint.
+   ========================================================================== */
+[data-style="coastal-editorial"] {
+  --bg-primary: #F8F9FA;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #EEF2F5;
+  --text-primary: #1A2530;
+  --text-muted: #5A6E7F;
+  --text-accent: #2C3E50;
+  --color-accent: #7A92A3;
+  --color-border: #D8E0E6;
+  --font-display: var(--font-serif-editorial);
+  --font-body: var(--font-sans);
+  --radius-card: 4px;
+  --radius-pill: 9999px;
+  --shadow-subtle: 0 4px 20px rgba(26, 37, 48, 0.05);
+}
+
+[data-style="coastal-editorial"] .hero-title {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+[data-style="coastal-editorial"] .hero-image-wrapper {
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   STYLE 2: SOUTHERN CLASSIC
+   Aesthetic: Formal Southern heritage, balanced symmetry, monogram language.
+   ========================================================================== */
+[data-style="southern-classic"] {
+  --bg-primary: #FDFBF7;
+  --bg-surface: #F9F6F0;
+  --bg-subtle: #F1ECE1;
+  --text-primary: #2D2A26;
+  --text-muted: #6B655C;
+  --text-accent: #1B3B2B;
+  --color-accent: #1B3B2B;
+  --color-border: #DFD7C7;
+  --font-display: var(--font-serif-classic);
+  --font-body: var(--font-sans);
+  --radius-card: 8px;
+  --shadow-subtle: 0 6px 24px rgba(45, 42, 38, 0.06);
+}
+
+[data-style="southern-classic"] .site-header {
+  border-bottom: 2px solid #DFD7C7;
+}
+
+[data-style="southern-classic"] .hero-container {
+  text-align: center;
+  grid-template-columns: 1fr;
+  max-width: 820px;
+}
+
+[data-style="southern-classic"] .hero-content {
+  align-items: center;
+  order: 1;
+}
+
+[data-style="southern-classic"] .hero-visual {
+  order: 2;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+[data-style="southern-classic"] .hero-title {
+  font-style: italic;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  color: #1B3B2B;
+}
+
+[data-style="southern-classic"] .hero-image-wrapper {
+  border: 3px solid #1B3B2B;
+  outline: 1px solid #C2A649;
+  outline-offset: 6px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(27, 59, 43, 0.12);
+}
+
+[data-style="southern-classic"] .btn-primary {
+  background-color: #1B3B2B;
+  color: #FDFBF7;
+  border: 1px solid #1B3B2B;
+}
+
+[data-style="southern-classic"] .btn-primary:hover {
+  background-color: #12281D;
+  box-shadow: 0 4px 15px rgba(27, 59, 43, 0.25);
+}
+
+[data-style="southern-classic"] .section-eyebrow {
+  color: #C2A649;
+  letter-spacing: 0.25em;
+}
+
+[data-style="southern-classic"] .gallery-item {
+  border: 2px solid #DFD7C7;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   STYLE 3: CONTEMPORARY LUXE
+   Aesthetic: Upscale modern wedding design, dark neutrals, champagne bronze.
+   ========================================================================== */
+[data-style="contemporary-luxe"] {
+  --bg-primary: #0E1015;
+  --bg-surface: #161922;
+  --bg-subtle: #1F2430;
+  --text-primary: #F0F3F6;
+  --text-muted: #9DA7B3;
+  --text-accent: #D4AF37;
+  --color-accent: #D4AF37;
+  --color-border: rgba(212, 175, 55, 0.22);
+  --font-display: var(--font-serif-luxe);
+  --font-body: var(--font-sans);
+  --radius-card: 2px;
+  --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-style="contemporary-luxe"] .site-header {
+  background-color: rgba(14, 16, 21, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+[data-style="contemporary-luxe"] .section-alt {
+  background-color: #13161D;
+}
+
+[data-style="contemporary-luxe"] .hero-title {
+  color: #F0F3F6;
+}
+
+[data-style="contemporary-luxe"] .btn-primary {
+  background-color: #D4AF37;
+  color: #0E1015;
+  border: 1px solid #D4AF37;
+  font-weight: 700;
+}
+
+[data-style="contemporary-luxe"] .btn-primary:hover {
+  background-color: #F3E5AB;
+  border-color: #F3E5AB;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+[data-style="contemporary-luxe"] .btn-secondary {
+  background-color: #161922;
+  color: #F0F3F6;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+[data-style="contemporary-luxe"] .card,
+[data-style="contemporary-luxe"] .package-card,
+[data-style="contemporary-luxe"] .venue-card,
+[data-style="contemporary-luxe"] .party-card,
+[data-style="contemporary-luxe"] .hotel-card,
+[data-style="contemporary-luxe"] .registry-card,
+[data-style="contemporary-luxe"] .faq-item,
+[data-style="contemporary-luxe"] .rsvp-card,
+[data-style="contemporary-luxe"] .schedule-card {
+  background-color: #161922;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+[data-style="contemporary-luxe"] .demo-dialog {
+  background-color: #161922;
+  color: #F0F3F6;
+  border: 1px solid #D4AF37;
+}
+
+[data-style="contemporary-luxe"] .demo-dialog-title {
+  color: #D4AF37;
+}
+
+[data-style="contemporary-luxe"] .demo-dialog-dismiss {
+  background-color: #D4AF37;
+  color: #0E1015;
+}
+
+/* ==========================================================================
+   STYLE 4: GARDEN ROMANTIC
+   Aesthetic: Organic garden-inspired romantic design, soft botanical arches.
+   ========================================================================== */
+[data-style="garden-romantic"] {
+  --bg-primary: #FAF6F0;
+  --bg-surface: #FFFDFB;
+  --bg-subtle: #F2ECE1;
+  --text-primary: #2A2322;
+  --text-muted: #6B5E5C;
+  --text-accent: #556B52;
+  --color-accent: #556B52;
+  --color-border: #E8DECF;
+  --font-display: var(--font-serif-romantic);
+  --font-body: var(--font-sans);
+  --radius-card: 20px;
+  --radius-pill: 9999px;
+  --shadow-subtle: 0 8px 25px rgba(42, 35, 34, 0.05);
+}
+
+[data-style="garden-romantic"] .hero-title {
+  color: #2A2322;
+  font-weight: 400;
+}
+
+[data-style="garden-romantic"] .hero-image-wrapper {
+  border-radius: 120px 120px 20px 20px;
+  border: 4px solid #FFFDFB;
+  box-shadow: 0 12px 35px rgba(85, 107, 82, 0.12);
+}
+
+[data-style="garden-romantic"] .btn {
+  border-radius: var(--radius-pill);
+}
+
+[data-style="garden-romantic"] .btn-primary {
+  background-color: #556B52;
+  color: #FAF6F0;
+  border-color: #556B52;
+}
+
+[data-style="garden-romantic"] .btn-primary:hover {
+  background-color: #425540;
+  box-shadow: 0 6px 20px rgba(85, 107, 82, 0.25);
+}
+
+[data-style="garden-romantic"] .gallery-item {
+  border-radius: 36px 36px 16px 16px;
+}
+
+[data-style="garden-romantic"] .card,
+[data-style="garden-romantic"] .venue-card,
+[data-style="garden-romantic"] .party-card,
+[data-style="garden-romantic"] .hotel-card,
+[data-style="garden-romantic"] .registry-card,
+[data-style="garden-romantic"] .schedule-card {
+  border-radius: 20px;
+}
+
+/* ==========================================================================
+   STYLE 5: BOLD MODERN
+   Aesthetic: High-contrast Swiss architectural grid, sharp geometry, cobalt.
+   ========================================================================== */
+[data-style="bold-modern"] {
+  --bg-primary: #FFFFFF;
+  --bg-surface: #F8F9FA;
+  --bg-subtle: #EDF0F3;
+  --text-primary: #08090C;
+  --text-muted: #4B5563;
+  --text-accent: #1D4ED8;
+  --color-accent: #1D4ED8;
+  --color-border: #08090C;
+  --font-display: var(--font-sans);
+  --font-body: var(--font-sans);
+  --radius-card: 0px !important;
+  --radius-pill: 0px !important;
+  --radius-sm: 0px !important;
+  --radius-md: 0px !important;
+  --radius-lg: 0px !important;
+  --shadow-subtle: 4px 4px 0px #08090C;
+}
+
+[data-style="bold-modern"] .site-header {
+  border-bottom: 2px solid #08090C;
+}
+
+[data-style="bold-modern"] .hero-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  font-size: clamp(3rem, 7vw, 5rem);
+}
+
+[data-style="bold-modern"] .hero-image-wrapper {
+  border: 2px solid #08090C;
+  border-radius: 0;
+  box-shadow: 8px 8px 0px #08090C;
+}
+
+[data-style="bold-modern"] .btn {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  border: 2px solid #08090C;
+}
+
+[data-style="bold-modern"] .btn-primary {
+  background-color: #08090C;
+  color: #FFFFFF;
+}
+
+[data-style="bold-modern"] .btn-primary:hover {
+  background-color: #1D4ED8;
+  border-color: #08090C;
+  color: #FFFFFF;
+  box-shadow: 4px 4px 0px #08090C;
+}
+
+[data-style="bold-modern"] .card,
+[data-style="bold-modern"] .venue-card,
+[data-style="bold-modern"] .party-card,
+[data-style="bold-modern"] .hotel-card,
+[data-style="bold-modern"] .registry-card,
+[data-style="bold-modern"] .faq-item,
+[data-style="bold-modern"] .rsvp-card,
+[data-style="bold-modern"] .schedule-card {
+  border: 2px solid #08090C;
+  border-radius: 0;
+  box-shadow: 4px 4px 0px #08090C;
+}
+
+[data-style="bold-modern"] .gallery-item {
+  border: 2px solid #08090C;
+  border-radius: 0;
+}

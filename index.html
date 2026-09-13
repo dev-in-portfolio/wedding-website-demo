@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" data-style="coastal-editorial">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sophia & Marcus | June 19, 2027 | Charleston, SC | DSCG Wedding Website Demo</title>
+  <meta name="description" content="A comprehensive wedding website demonstration for Dark Star Consulting Group's ★★ Wedding Website service level. Explore one Charleston celebration across five distinct visual directions.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>★</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/base.css">
+  <link rel="stylesheet" href="/src/styles/demo-bar.css">
+  <link rel="stylesheet" href="/src/styles/nav.css">
+  <link rel="stylesheet" href="/src/styles/hero.css">
+  <link rel="stylesheet" href="/src/styles/sections.css">
+  <link rel="stylesheet" href="/src/styles/rsvp.css">
+  <link rel="stylesheet" href="/src/styles/gallery.css">
+  <link rel="stylesheet" href="/src/styles/themes.css">
+</head>
+<body data-style="coastal-editorial">
+
+  <!-- Persistent DSCG Demo Bar -->
+  <aside class="demo-bar" aria-label="DSCG Demo Control Bar">
+    <div class="container demo-bar-container">
+      <div class="demo-bar-left">
+        <span class="demo-bar-brand">★ DSCG DEMO</span>
+        <span class="demo-bar-tier">★★ Wedding Website ($795 Starting Price)</span>
+      </div>
+
+      <!-- Desktop Style Selector Pills -->
+      <nav class="demo-bar-center" aria-label="Visual design direction options">
+        <span class="style-selector-label">Direction:</span>
+        <button type="button" class="style-btn active" data-style-target="coastal-editorial" aria-pressed="true">Coastal Editorial</button>
+        <button type="button" class="style-btn" data-style-target="southern-classic" aria-pressed="false">Southern Classic</button>
+        <button type="button" class="style-btn" data-style-target="contemporary-luxe" aria-pressed="false">Contemporary Luxe</button>
+        <button type="button" class="style-btn" data-style-target="garden-romantic" aria-pressed="false">Garden Romantic</button>
+        <button type="button" class="style-btn" data-style-target="bold-modern" aria-pressed="false">Bold Modern</button>
+      </nav>
+
+      <!-- Mobile Style Selector Dropdown -->
+      <div class="demo-bar-select-wrapper">
+        <label for="style-select" class="sr-only">Choose Design Direction</label>
+        <select id="style-select" class="demo-bar-select">
+          <option value="coastal-editorial" selected>1. Coastal Editorial</option>
+          <option value="southern-classic">2. Southern Classic</option>
+          <option value="contemporary-luxe">3. Contemporary Luxe</option>
+          <option value="garden-romantic">4. Garden Romantic</option>
+          <option value="bold-modern">5. Bold Modern</option>
+        </select>
+      </div>
+
+      <!-- Return Link to DSCG Portal -->
+      <div class="demo-bar-right">
+        <a href="https://dscg-wedding-portal.netlify.app" class="demo-bar-return" title="Return to DSCG Wedding Portal">
+          &larr; <span>Return to Portal</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand" aria-label="Sophia and Marcus Wedding Home">
+        <span>S & M</span>
+        <span class="nav-brand-sub">Charleston</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#story" class="nav-link">Our Story</a></li>
+          <li><a href="#schedule" class="nav-link">Schedule</a></li>
+          <li><a href="#venue" class="nav-link">Venue</a></li>
+          <li><a href="#party" class="nav-link">Wedding Party</a></li>
+          <li><a href="#travel" class="nav-link">Travel</a></li>
+          <li><a href="#registry" class="nav-link">Registry</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#rsvp" class="nav-link nav-rsvp-btn">RSVP</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-nav-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer" hidden>
+    <div class="mobile-nav-header">
+      <span class="mobile-nav-title">Menu</span>
+      <button type="button" id="mobile-nav-close" class="mobile-nav-close" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <nav>
+      <ul class="mobile-nav-links">
+        <li><a href="#story" class="nav-link">Our Story</a></li>
+        <li><a href="#schedule" class="nav-link">Wedding Schedule</a></li>
+        <li><a href="#venue" class="nav-link">Venue & Details</a></li>
+        <li><a href="#party" class="nav-link">Wedding Party</a></li>
+        <li><a href="#travel" class="nav-link">Travel & Accommodations</a></li>
+        <li><a href="#registry" class="nav-link">Gift Registry</a></li>
+        <li><a href="#faq" class="nav-link">Frequently Asked Questions</a></li>
+        <li><a href="#gallery" class="nav-link">Celebration Gallery</a></li>
+        <li><a href="#rsvp" class="nav-link nav-rsvp-btn" style="margin-top: 1rem; text-align: center;">RSVP to Celebrate</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-eyebrow">The Celebration Of</p>
+          <h1 class="hero-title">Sophia Bennett &amp; Marcus Reed</h1>
+          <div class="hero-date-location">
+            <p class="hero-date">Saturday, June 19, 2027</p>
+            <p class="hero-venue">The Marlowe House &amp; Gardens &bull; Charleston, South Carolina</p>
+          </div>
+          <div class="hero-actions">
+            <a href="#rsvp" class="btn btn-primary">RSVP to Celebrate</a>
+            <a href="#schedule" class="btn btn-secondary">View Schedule</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="/assets/images/hero-default.jpg" alt="Sophia Bennett and Marcus Reed on the historic veranda at The Marlowe House" class="hero-image" width="800" height="1000">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section section-alt" id="story">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Our Journey</p>
+          <h2 class="section-title">Five Summers Along the Battery</h2>
+          <p class="section-subtitle">From an unexpected rainstorm in the historic French Quarter to forever under the live oaks.</p>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-body">
+            <p class="story-lead">We believe the best chapters in life begin without a script.</p>
+            <p>Our story started on an unseasonably warm afternoon five summers ago outside a small antiquarian bookstore on Church Street. When a sudden Charleston thunderstorm rolled across the harbor, we both ducked beneath the same striped awning, striking up a conversation about historic architecture, Lowcountry waterways, and our mutual obsession with local coffee.</p>
+            <p>Those first few hours unfolded into years of shared sunrise walks along the Battery, restoring our 1920s craftsman home, navigating tidal marshes in a wooden skiff, and discovering that life is infinitely richer together.</p>
+            <p>In October 2025, during an evening stroll by White Point Garden, Marcus asked Sophia to share a lifetime of adventures together. We could not imagine a more meaningful place to exchange our vows than right here in Charleston, surrounded by the family and friends who have shaped our lives.</p>
+          </div>
+
+          <div class="story-milestones">
+            <div class="milestone-item">
+              <span class="milestone-year">June 2022</span>
+              <h3 class="milestone-title">An Afternoon Storm</h3>
+              <p class="milestone-desc">Meeting by chance beneath an awning on Church Street.</p>
+            </div>
+            <div class="milestone-item">
+              <span class="milestone-year">Autumn 2023</span>
+              <h3 class="milestone-title">A Shared Lowcountry Home</h3>
+              <p class="milestone-desc">Adopting our rescue lab, Cooper, and restoring our historic cottage.</p>
+            </div>
+            <div class="milestone-item">
+              <span class="milestone-year">October 2025</span>
+              <h3 class="milestone-title">The Question on the Battery</h3>
+              <p class="milestone-desc">Sunset over Charleston Harbor with the tide rolling in.</p>
+            </div>
+            <div class="milestone-item">
+              <span class="milestone-year">June 19, 2027</span>
+              <h3 class="milestone-title">The Wedding Celebration</h3>
+              <p class="milestone-desc">Gathering everyone we love at The Marlowe House &amp; Gardens.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wedding Day Schedule (★★ Day-of Only) -->
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Day-Of Details</p>
+          <h2 class="section-title">The Wedding Day Schedule</h2>
+          <p class="section-subtitle">Saturday, June 19, 2027 &bull; A continuous, joyful celebration from ceremony to midnight sendoff.</p>
+        </div>
+
+        <div class="schedule-timeline">
+          <article class="schedule-card">
+            <div class="schedule-time">3:30 PM</div>
+            <div class="schedule-info">
+              <h3>Guest Arrival &amp; Welcome Refreshments</h3>
+              <p class="schedule-location">The Marlowe Garden Lawn</p>
+              <p class="schedule-desc">Guests arrive to acoustic strings, chilled hibiscus iced tea, and artisanal sparkling water.</p>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-time">4:00 PM</div>
+            <div class="schedule-info">
+              <h3>Ceremony Under the Live Oaks</h3>
+              <p class="schedule-location">The South Lawn Altar</p>
+              <p class="schedule-desc">Vows exchanged beneath centuries-old moss-draped live oaks and floral garden arches.</p>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-time">4:30 PM</div>
+            <div class="schedule-info">
+              <h3>Veranda Cocktail Hour</h3>
+              <p class="schedule-location">The Historic Double Veranda</p>
+              <p class="schedule-desc">Signature cocktails, local Lowcountry oysters, artisanal passed canapés, and live jazz.</p>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-time">6:00 PM</div>
+            <div class="schedule-info">
+              <h3>Courtyard Dinner &amp; Welcoming Toasts</h3>
+              <p class="schedule-location">The Fountain Courtyard</p>
+              <p class="schedule-desc">A seated three-course seasonal dinner by candlelight, accompanied by family toasts.</p>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-time">7:30 PM</div>
+            <div class="schedule-info">
+              <h3>First Dances &amp; Celebration</h3>
+              <p class="schedule-location">The Garden Pavilion</p>
+              <p class="schedule-desc">Live 8-piece band, celebratory cocktails, and dancing under festoon café lighting.</p>
+            </div>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-time">10:30 PM</div>
+            <div class="schedule-info">
+              <h3>Sparkler Farewell &amp; Sendoff</h3>
+              <p class="schedule-location">The Main Carriage Drive</p>
+              <p class="schedule-desc">A luminous sparkler exit as the newlyweds depart in a vintage 1958 roadster.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue & Practical Details -->
+    <section class="section section-alt" id="venue">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">The Destination</p>
+          <h2 class="section-title">The Marlowe House &amp; Gardens</h2>
+          <p class="section-subtitle">An iconic 19th-century private estate in the heart of historic Charleston.</p>
+        </div>
+
+        <div class="venue-grid">
+          <div class="venue-card">
+            <h3 class="venue-name">The Marlowe House</h3>
+            <p class="venue-address">142 Church Street &bull; Charleston, South Carolina 29401</p>
+            
+            <div class="venue-details-list">
+              <div class="venue-detail-item">
+                <h4>Ceremony &amp; Reception Setting</h4>
+                <p>Both our ceremony and evening celebration will take place on the grounds of The Marlowe House. The ceremony is outdoors on the lawn, followed by covered veranda cocktails and courtyard dining.</p>
+              </div>
+
+              <div class="venue-detail-item">
+                <h4>Dress Code: Summer Formal / Black-Tie Optional</h4>
+                <p>We invite guests to dress in formal evening attire. Lightweight tuxedos or dark suits for gentlemen, and elegant floor-length or formal midi gowns for ladies. Breathable formal fabrics are encouraged for the June warmth.</p>
+              </div>
+
+              <div class="venue-detail-item">
+                <h4>Arrival &amp; Transportation</h4>
+                <p>Complimentary guest valet parking is provided at the main carriage gates. Dedicated private shuttles will also run continuously between our recommended hotels and the estate.</p>
+              </div>
+
+              <div class="venue-detail-item">
+                <h4>Unplugged Ceremony</h4>
+                <p>We kindly request that guests silence and put away all phones and cameras during our ceremony so everyone may be fully present with us.</p>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary btn-full" data-action="venue-map">
+              View Map &amp; Directions &rarr;
+            </button>
+          </div>
+
+          <div class="venue-image-block">
+            <div class="hero-image-wrapper" style="aspect-ratio: 4/3;">
+              <img src="/assets/images/gallery-2.jpg" alt="The Marlowe House courtyard and fountain" class="hero-image" width="700" height="525">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wedding Party Section -->
+    <section class="section" id="party">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Inner Circle</p>
+          <h2 class="section-title">The Wedding Party</h2>
+          <p class="section-subtitle">The cherished siblings and lifelong friends standing beside us on our wedding day.</p>
+        </div>
+
+        <div class="wedding-party-grid">
+          <article class="party-card">
+            <p class="party-role">Maid of Honor</p>
+            <h3 class="party-name">Claire Vance</h3>
+            <p class="party-bio">Sophia's sister, architectural preservationist, and lifelong confidante. Renowned for her sharp humor and thoughtful toasts.</p>
+          </article>
+
+          <article class="party-card">
+            <p class="party-role">Best Man</p>
+            <h3 class="party-name">David Reed</h3>
+            <p class="party-bio">Marcus's elder brother and sailing partner. Flew across the country from Seattle to keep Marcus grounded on the big day.</p>
+          </article>
+
+          <article class="party-card">
+            <p class="party-role">Bridesmaid</p>
+            <h3 class="party-name">Elena Thorne</h3>
+            <p class="party-bio">Sophia's university roommate and fellow garden design enthusiast. Mastermind behind countless spontaneous road trips.</p>
+          </article>
+
+          <article class="party-card">
+            <p class="party-role">Groomsman</p>
+            <h3 class="party-name">Alexander Hayes</h3>
+            <p class="party-bio">Marcus's university engineering partner, marathon running teammate, and weekend barbecue co-captain.</p>
+          </article>
+
+          <article class="party-card">
+            <p class="party-role">Bridesmaid</p>
+            <h3 class="party-name">Maya Lin</h3>
+            <p class="party-bio">Childhood neighbor and confidante since kindergarten. The person who first introduced Sophia to Charleston in 2019.</p>
+          </article>
+
+          <article class="party-card">
+            <p class="party-role">Groomsman</p>
+            <h3 class="party-name">Julian Vance</h3>
+            <p class="party-bio">Sophia's brother, certified sommelier, and Marcus's Lowcountry inshore fishing companion.</p>
+          </article>
+
+          <article class="party-card">
+            <p class="party-role">Bridesmaid</p>
+            <h3 class="party-name">Harper Davis</h3>
+            <p class="party-bio">Sophia's creative collaborator and Charleston culinary guide. Keeper of the wedding-day timeline.</p>
+          </article>
+
+          <article class="party-card">
+            <p class="party-role">Groomsman</p>
+            <h3 class="party-name">Thomas Wright</h3>
+            <p class="party-bio">Marcus's longtime high school friend, Lowcountry historian, and resident vinyl record collector.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel & Accommodations -->
+    <section class="section section-alt" id="travel">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Guest Logistics</p>
+          <h2 class="section-title">Travel &amp; Charleston Accommodations</h2>
+          <p class="section-subtitle">We have reserved courtesy room blocks at three historic Charleston hotels within easy reach of the estate.</p>
+        </div>
+
+        <div class="hotels-grid">
+          <article class="hotel-card">
+            <div>
+              <h3 class="hotel-name">The Millsbury Hotel</h3>
+              <p class="hotel-location">French Quarter &bull; 4-Minute Walk to Venue</p>
+              <p class="hotel-desc">A restored boutique hotel featuring private courtyard balconies, Southern afternoon tea service, and immediate proximity to Church Street.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-full" data-action="hotel-booking" data-hotel-name="The Millsbury Hotel">
+              Reserve Within Block &rarr;
+            </button>
+          </article>
+
+          <article class="hotel-card">
+            <div>
+              <h3 class="hotel-name">The Palmetto Grand</h3>
+              <p class="hotel-location">Broad Street &bull; 8-Minute Walk to Venue</p>
+              <p class="hotel-desc">A classic historic landmark offering grand verandas, luxury marble suites, and dedicated shuttle pickup to The Marlowe House.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-full" data-action="hotel-booking" data-hotel-name="The Palmetto Grand">
+              Reserve Within Block &rarr;
+            </button>
+          </article>
+
+          <article class="hotel-card">
+            <div>
+              <h3 class="hotel-name">Harborline Suites</h3>
+              <p class="hotel-location">Waterfront Park &bull; 10-Minute Walk to Venue</p>
+              <p class="hotel-desc">Spacious one- and two-bedroom harborview suites ideal for families and traveling groups, overlooking the Charleston Harbor waters.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-full" data-action="hotel-booking" data-hotel-name="Harborline Suites">
+              Reserve Within Block &rarr;
+            </button>
+          </article>
+        </div>
+
+        <div class="travel-tips-card">
+          <div class="badge">Travel Note</div>
+          <div>
+            <h4 class="travel-tips-title">Charleston International Airport (CHS)</h4>
+            <p class="travel-tips-text">The airport is located 12 miles northwest of downtown Charleston (approx. 20–25 minutes by taxi or rideshare). Once in the historic district, Charleston is exceptionally walkable and pedestrian-friendly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registry Section -->
+    <section class="section" id="registry">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Celebration Gifts</p>
+          <h2 class="section-title">Gift Registry Funds</h2>
+          <p class="section-subtitle">Your presence celebrating with us in Charleston is our greatest gift. Should you wish to honor us with a gesture, we have established three curated funds:</p>
+        </div>
+
+        <div class="registry-grid">
+          <article class="registry-card">
+            <div>
+              <div class="registry-card-icon" aria-hidden="true">&#9751;</div>
+              <h3 class="registry-card-title">Charleston Home Restoration</h3>
+              <p class="registry-card-desc">Helping us renovate the heart of our 1920s craftsman home—specifically our kitchen and traditional courtyard garden.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-full" data-action="registry-contribute" data-fund-name="Charleston Home Restoration">
+              Contribute to Fund &rarr;
+            </button>
+          </article>
+
+          <article class="registry-card">
+            <div>
+              <div class="registry-card-icon" aria-hidden="true">&#9992;</div>
+              <h3 class="registry-card-title">Amalfi Coast Honeymoon</h3>
+              <p class="registry-card-desc">Support toward our dream coastal Italian journey: sunset train travel, cliffside dining in Ravello, and Mediterranean cooking classes.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-full" data-action="registry-contribute" data-fund-name="Amalfi Coast Honeymoon">
+              Contribute to Fund &rarr;
+            </button>
+          </article>
+
+          <article class="registry-card">
+            <div>
+              <div class="registry-card-icon" aria-hidden="true">&#10047;</div>
+              <h3 class="registry-card-title">Coastal Conservation League</h3>
+              <p class="registry-card-desc">A cause deeply dear to us both, dedicated to protecting the fragile barrier islands, maritime forests, and tidal salt marshes of coastal South Carolina.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-full" data-action="registry-contribute" data-fund-name="Coastal Conservation League">
+              Make a Donation &rarr;
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Guest Inquiries</p>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Everything you need to know about celebrating with us in Charleston.</p>
+        </div>
+
+        <div class="faq-container">
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+              <span>What is the dress code?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-1" class="faq-answer" hidden>
+              <p>Our dress code is Summer Formal / Black-Tie Optional. We encourage lightweight tuxedos or dark formal suits for men, and elegant floor-length or formal midi evening gowns for women. As parts of the celebration occur outdoors, breathable luxury fabrics are recommended.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+              <span>Are children invited?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-2" class="faq-answer" hidden>
+              <p>While we cherish all the little ones in our lives, our wedding ceremony and reception will be an adults-only celebration. We hope this allows all parents a relaxed evening of celebration.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+              <span>Is the wedding indoors or outdoors?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-3" class="faq-answer" hidden>
+              <p>The ceremony will take place outdoors on the South Lawn beneath the live oaks. Cocktails will be served along the shaded double veranda, followed by dinner and dancing in the courtyard and open-air covered garden pavilion.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
+              <span>What time should I arrive?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-4" class="faq-answer" hidden>
+              <p>Guest arrival begins at 3:30 PM with welcome refreshments and music. We ask all guests to be comfortably seated by 3:50 PM as the ceremony will commence promptly at 4:00 PM.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-5">
+              <span>Can I bring a plus-one or date?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-5" class="faq-answer" hidden>
+              <p>Due to intimate venue capacity, we can only accommodate guests specifically named on your formal invitation envelope and digital RSVP confirmation.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-6">
+              <span>What if I have dietary restrictions or allergies?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-6" class="faq-answer" hidden>
+              <p>Our caterer is happy to accommodate vegetarian, gluten-free, dairy-free, and nut allergies. Please specify any dietary requirements in the dedicated field of the RSVP form below.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-7">
+              <span>Is transportation provided between hotels and the estate?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-7" class="faq-answer" hidden>
+              <p>Yes. Private shuttle vans will run on a continuous loop starting at 3:00 PM from our three partner hotels (The Millsbury, The Palmetto Grand, and Harborline Suites) and will operate throughout the evening until the farewell sendoff.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-8">
+              <span>When is the RSVP deadline?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div id="faq-ans-8" class="faq-answer" hidden>
+              <p>Please kindly complete your digital RSVP using the form below no later than Friday, May 1, 2027 so we may finalize seating and dining arrangements with our estate staff.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Demo RSVP Section -->
+    <section class="section" id="rsvp">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Digital Response</p>
+          <h2 class="section-title">Celebrate With Us &bull; RSVP</h2>
+          <p class="section-subtitle">Please respond by May 1, 2027. This interactive form demonstrates the front-end guest response experience included in our ★★ tier.</p>
+        </div>
+
+        <div class="rsvp-card">
+          <form id="rsvp-form" class="rsvp-form" novalidate>
+            <!-- Name & Contact -->
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="guest-name" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="guest-name" name="guestName" class="form-input" placeholder="e.g. Catherine Morgan" required>
+              </div>
+              <div class="form-group">
+                <label for="guest-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="guest-email" name="guestEmail" class="form-input" placeholder="e.g. catherine@example.com" required>
+              </div>
+            </div>
+
+            <!-- Attendance Selection -->
+            <div class="form-group">
+              <label class="form-label">Will you be attending? <span class="required" aria-hidden="true">*</span></label>
+              <div class="radio-group" role="radiogroup" aria-label="Attendance Options">
+                <label class="radio-card">
+                  <input type="radio" name="attending" value="yes" checked>
+                  <span class="radio-label-text">Joyfully Accepts</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="attending" value="no">
+                  <span class="radio-label-text">Regretfully Declines</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Conditional Details (Visible When Attending) -->
+            <div id="rsvp-attending-details" class="rsvp-conditional-group">
+              <div class="form-group">
+                <label for="plus-one-name" class="form-label">Plus-One Full Name (If noted on invitation)</label>
+                <input type="text" id="plus-one-name" name="plusOneName" class="form-input" placeholder="e.g. Alexander Morgan">
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="meal-preference" class="form-label">Entr&eacute;e Selection <span class="required" aria-hidden="true">*</span></label>
+                  <select id="meal-preference" name="mealPreference" class="form-select">
+                    <option value="halibut">Pan-Seared Local Halibut (Citrus Butter)</option>
+                    <option value="filet">Peppercorn Filet Mignon (Truffle Jus)</option>
+                    <option value="risotto">Wild Mushroom &amp; Truffle Risotto (V)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="dietary-notes" class="form-label">Dietary Restrictions</label>
+                  <select id="dietary-notes" name="dietaryNotes" class="form-select">
+                    <option value="none">None</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                    <option value="dairy-free">Dairy-Free</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="nut-allergy">Nut Allergy</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personal Note -->
+            <div class="form-group">
+              <label for="guest-note" class="form-label">Warm Wishes or Note for Sophia &amp; Marcus</label>
+              <textarea id="guest-note" name="guestNote" class="form-textarea" placeholder="Share a favorite memory or note for the couple..."></textarea>
+            </div>
+
+            <div class="rsvp-actions">
+              <button type="submit" class="btn btn-primary btn-full">
+                Submit RSVP Demonstration &rarr;
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Celebration Gallery (8 Curated Images) -->
+    <section class="section section-alt" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-eyebrow">Captured Moments</p>
+          <h2 class="section-title">Celebration Gallery</h2>
+          <p class="section-subtitle">Visual highlights of our life together and the historic setting of our celebration.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-1.jpg" alt="Sophia and Marcus walking along the historic Charleston Battery" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Afternoon promenade under the centuries-old live oaks on the Battery</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-2.jpg" alt="The Marlowe House courtyard fountain and boxwood gardens" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">The courtyard garden fountain at The Marlowe House</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-3.jpg" alt="Ceremony floral arch and bentwood chairs on the South Lawn" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Garden ceremony altar framed by garden roses and live oaks</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-4.jpg" alt="Candlelit tablescape with Lowcountry florals and calligraphy menus" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Twilight courtyard dinner tablescape with taper candlelight</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-5.jpg" alt="Bridal bouquet with silk ribbons and letterpress stationery suite" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Bridal flatlay with garden roses, silk ribbons, and letterpress invitation</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-6.jpg" alt="Evening candlelit reception in the historic courtyard" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Evening celebration and toasts under the veranda</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-7.jpg" alt="Joyful toast with champagne flutes during evening reception" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Champagne toasts and first dances under festoon lights</figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="/assets/images/gallery-8.jpg" alt="Intimate couple portrait during Charleston sunset" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Golden hour candid portrait overlooking Charleston Harbor</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing & Coordinator Contact -->
+    <section class="closing-section">
+      <div class="container">
+        <h2 class="closing-title">We Can't Wait to Celebrate in Charleston</h2>
+        <p class="closing-text">For questions regarding accommodations, logistics, or accessibility, our wedding coordination team is available to assist guests.</p>
+        <button type="button" class="btn btn-secondary" data-action="contact-coordinator">
+          Contact the Wedding Coordinator
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>DSCG Wedding Websites &bull; Sales Demonstration</h4>
+          <p class="footer-disclosure">This site is a sales demonstration for the Dark Star Consulting Group ★★ Wedding Website package ($795 starting price). The couple, venue, and schedule depicted are fictional. Live client sites feature bespoke visual direction, custom domains, and integrated private guest registries.</p>
+        </div>
+        <div class="footer-return">
+          <a href="https://dscg-wedding-portal.netlify.app" class="footer-return-link">
+            &larr; Return to DSCG Wedding Portal
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Dark Star Consulting Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Accessible Demo Notice Dialog -->
+  <dialog id="demo-modal" class="demo-dialog" aria-labelledby="demo-dialog-title" aria-describedby="demo-dialog-text">
+    <div class="demo-dialog-header">
+      <h3 id="demo-dialog-title" class="demo-dialog-title">Demonstration Notice</h3>
+      <button type="button" class="demo-dialog-close" aria-label="Close dialog">&times;</button>
+    </div>
+    <p id="demo-dialog-text" class="demo-dialog-text">
+      Interactive venue directions and booking flows are included on live client sites. This location and these actions are fictional for the DSCG demonstration.
+    </p>
+    <div class="demo-dialog-actions">
+      <button type="button" class="demo-dialog-dismiss">Understood</button>
+    </div>
+  </dialog>
+
+  <!-- Application Script -->
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>
