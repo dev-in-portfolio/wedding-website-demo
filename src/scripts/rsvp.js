@@ -233,10 +233,10 @@ export function initRSVP() {
 
     const guestName = nameInput ? nameInput.value.trim() : 'Guest';
     openDemoModal({
-      title: isAttending ? 'RSVP Confirmed (Demo)' : 'Response Received (Demo)',
+      title: isAttending ? 'RSVP Demonstration (Attending)' : 'Response Demonstration (Declining)',
       message: isAttending
-        ? `Thank you, ${guestName}! Your RSVP demonstration for Sophia & Marcus's wedding celebration was submitted successfully. In a production client website, this response is routed securely to the couple's planner or coordinator database.`
-        : `Thank you, ${guestName}. Your regrets demonstration has been recorded. In a production client website, this response is updated immediately in the wedding coordinator registry.`
+        ? `Thank you, ${guestName}! RSVP interaction demonstrated successfully. No information was submitted or stored because this is a fictional DSCG sales demonstration. On a live client website, RSVP responses can be configured for the approved guest-management workflow.`
+        : `Thank you, ${guestName}. Response interaction demonstrated successfully. No information was submitted or stored because this is a fictional DSCG sales demonstration. On a live client website, guest responses can be configured for the approved guest-management workflow.`
     });
 
     // Reset Form completely to default state
