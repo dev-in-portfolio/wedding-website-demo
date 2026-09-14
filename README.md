@@ -8,7 +8,7 @@ This repository is **Site 3 of 5** in the authoritative DSCG Wedding Websites ec
 
 1. **Site 1: DSCG Wedding Portal** — [https://dscg-wedding-portal.netlify.app](https://dscg-wedding-portal.netlify.app)
 2. **Site 2: Wedding Essential Demo (★)** — [https://wedding-essential-demo.netlify.app](https://wedding-essential-demo.netlify.app)
-3. **Site 3: Wedding Website Demo (★★)** *(This Repository)* — [https://wedding-website-demo.netlify.app](https://wedding-website-demo.netlify.app)
+3. **Site 3: Wedding Website Demo (★★)** *(This Repository)* — [https://wedding-website-demo-960.netlify.app](https://wedding-website-demo-960.netlify.app)
 4. **Site 4: Wedding Weekend / Destination Demo (★★★)**
 5. **Site 5: DSCG Wedding Intake**
 
@@ -17,7 +17,7 @@ This repository is **Site 3 of 5** in the authoritative DSCG Wedding Websites ec
 - **Couple**: Sophia Bennett & Marcus Reed
 - **Date**: Saturday, June 19, 2027
 - **Location**: Charleston, South Carolina
-- **Venue**: The Marlowe House & Gardens, 142 Church Street, Charleston, SC 29401 (Fictional)
+- **Venue**: The Marlowe House & Gardens, Historic District &bull; Charleston, South Carolina (Fictional)
 
 ## Demonstrated ★★ Capabilities
 

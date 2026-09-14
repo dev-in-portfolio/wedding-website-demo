@@ -257,7 +257,7 @@
         <div class="venue-grid">
           <div class="venue-card">
             <h3 class="venue-name">The Marlowe House</h3>
-            <p class="venue-address">142 Church Street &bull; Charleston, South Carolina 29401</p>
+            <p class="venue-address">Historic District &bull; Charleston, South Carolina</p>
             
             <div class="venue-details-list">
               <div class="venue-detail-item">
@@ -560,48 +560,53 @@
 
         <div class="rsvp-card">
           <form id="rsvp-form" class="rsvp-form" novalidate>
+            <!-- Form Level Status / Live Region -->
+            <div id="rsvp-status" class="rsvp-status" role="alert" aria-live="polite" hidden></div>
+
             <!-- Name & Contact -->
             <div class="form-grid-2">
               <div class="form-group">
                 <label for="guest-name" class="form-label">Full Name <span class="required" aria-hidden="true">*</span></label>
-                <input type="text" id="guest-name" name="guestName" class="form-input" placeholder="e.g. Catherine Morgan" required>
+                <input type="text" id="guest-name" name="guestName" class="form-input" placeholder="e.g. Catherine Morgan" aria-required="true" aria-describedby="guest-name-error" required>
+                <span id="guest-name-error" class="form-error" role="alert" aria-live="polite" hidden></span>
               </div>
               <div class="form-group">
                 <label for="guest-email" class="form-label">Email Address <span class="required" aria-hidden="true">*</span></label>
-                <input type="email" id="guest-email" name="guestEmail" class="form-input" placeholder="e.g. catherine@example.com" required>
+                <input type="email" id="guest-email" name="guestEmail" class="form-input" placeholder="e.g. catherine@example.com" aria-required="true" aria-describedby="guest-email-error" required>
+                <span id="guest-email-error" class="form-error" role="alert" aria-live="polite" hidden></span>
               </div>
             </div>
 
             <!-- Attendance Selection -->
             <div class="form-group">
-              <label class="form-label">Will you be attending? <span class="required" aria-hidden="true">*</span></label>
-              <div class="radio-group" role="radiogroup" aria-label="Attendance Options">
-                <label class="radio-card">
-                  <input type="radio" name="attending" value="yes" checked>
-                  <span class="radio-label-text">Joyfully Accepts</span>
-                </label>
-                <label class="radio-card">
-                  <input type="radio" name="attending" value="no">
-                  <span class="radio-label-text">Regretfully Declines</span>
-                </label>
-              </div>
+              <fieldset class="attendance-fieldset">
+                <legend class="form-label">Will you be attending? <span class="required" aria-hidden="true">*</span></legend>
+                <div class="radio-group" role="radiogroup" aria-label="Attendance Options" aria-describedby="attendance-error">
+                  <label class="radio-card">
+                    <input type="radio" name="attending" value="yes" checked>
+                    <span class="radio-label-text">Joyfully Accepts</span>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="attending" value="no">
+                    <span class="radio-label-text">Regretfully Declines</span>
+                  </label>
+                </div>
+                <span id="attendance-error" class="form-error" role="alert" aria-live="polite" hidden></span>
+              </fieldset>
             </div>
 
             <!-- Conditional Details (Visible When Attending) -->
             <div id="rsvp-attending-details" class="rsvp-conditional-group">
-              <div class="form-group">
-                <label for="plus-one-name" class="form-label">Plus-One Full Name (If noted on invitation)</label>
-                <input type="text" id="plus-one-name" name="plusOneName" class="form-input" placeholder="e.g. Alexander Morgan">
-              </div>
-
               <div class="form-grid-2">
                 <div class="form-group">
                   <label for="meal-preference" class="form-label">Entr&eacute;e Selection <span class="required" aria-hidden="true">*</span></label>
-                  <select id="meal-preference" name="mealPreference" class="form-select">
+                  <select id="meal-preference" name="mealPreference" class="form-select" aria-required="true" aria-describedby="meal-preference-error" required>
+                    <option value="">Select an entrée...</option>
                     <option value="halibut">Pan-Seared Local Halibut (Citrus Butter)</option>
                     <option value="filet">Peppercorn Filet Mignon (Truffle Jus)</option>
                     <option value="risotto">Wild Mushroom &amp; Truffle Risotto (V)</option>
                   </select>
+                  <span id="meal-preference-error" class="form-error" role="alert" aria-live="polite" hidden></span>
                 </div>
 
                 <div class="form-group">
@@ -614,6 +619,37 @@
                     <option value="vegan">Vegan</option>
                     <option value="nut-allergy">Nut Allergy</option>
                   </select>
+                </div>
+              </div>
+
+              <!-- Plus-One Inclusion Checkbox -->
+              <div class="form-group">
+                <label class="checkbox-card">
+                  <input type="checkbox" id="has-plus-one" name="hasPlusOne">
+                  <span class="checkbox-label-text">My invitation includes a plus-one</span>
+                </label>
+              </div>
+
+              <!-- Plus-One Conditional Details -->
+              <div id="plus-one-details" class="plus-one-subgroup" hidden>
+                <h4 class="subgroup-title">Plus-One Details</h4>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="plus-one-name" class="form-label">Plus-One Full Name <span class="required" aria-hidden="true">*</span></label>
+                    <input type="text" id="plus-one-name" name="plusOneName" class="form-input" placeholder="e.g. Alexander Morgan" aria-describedby="plus-one-name-error">
+                    <span id="plus-one-name-error" class="form-error" role="alert" aria-live="polite" hidden></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="plus-one-meal" class="form-label">Plus-One Entr&eacute;e Selection <span class="required" aria-hidden="true">*</span></label>
+                    <select id="plus-one-meal" name="plusOneMeal" class="form-select" aria-describedby="plus-one-meal-error">
+                      <option value="">Select plus-one entrée...</option>
+                      <option value="halibut">Pan-Seared Local Halibut (Citrus Butter)</option>
+                      <option value="filet">Peppercorn Filet Mignon (Truffle Jus)</option>
+                      <option value="risotto">Wild Mushroom &amp; Truffle Risotto (V)</option>
+                    </select>
+                    <span id="plus-one-meal-error" class="form-error" role="alert" aria-live="polite" hidden></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -670,18 +706,18 @@
           </figure>
 
           <figure class="gallery-item">
-            <img src="/assets/images/gallery-6.jpg" alt="Evening candlelit reception in the historic courtyard" class="gallery-image" loading="lazy">
-            <figcaption class="gallery-caption">Evening celebration and toasts under the veranda</figcaption>
+            <img src="/assets/images/gallery-6.jpg" alt="Guests raising champagne flutes across candlelit reception dining table with fairy lights" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Intimate dinner toasts and candlelight under the garden veranda</figcaption>
           </figure>
 
           <figure class="gallery-item">
-            <img src="/assets/images/gallery-7.jpg" alt="Joyful toast with champagne flutes during evening reception" class="gallery-image" loading="lazy">
-            <figcaption class="gallery-caption">Champagne toasts and first dances under festoon lights</figcaption>
+            <img src="/assets/images/gallery-7.jpg" alt="Sophia and Marcus celebrating their first dance with sparklers under festoon lights" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Joyful first dances and celebration beneath warm festoon lights and sparklers</figcaption>
           </figure>
 
           <figure class="gallery-item">
-            <img src="/assets/images/gallery-8.jpg" alt="Intimate couple portrait during Charleston sunset" class="gallery-image" loading="lazy">
-            <figcaption class="gallery-caption">Golden hour candid portrait overlooking Charleston Harbor</figcaption>
+            <img src="/assets/images/gallery-8.jpg" alt="Sophia and Marcus embracing at sunset on a wooden harbor dock overlooking Charleston waters" class="gallery-image" loading="lazy">
+            <figcaption class="gallery-caption">Charleston Harbor sunset portrait along the historic waterfront</figcaption>
           </figure>
         </div>
       </div>
