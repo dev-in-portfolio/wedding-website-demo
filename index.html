@@ -17,8 +17,9 @@
   <link rel="stylesheet" href="/src/styles/rsvp.css">
   <link rel="stylesheet" href="/src/styles/gallery.css">
   <link rel="stylesheet" href="/src/styles/themes.css">
+  <link rel="stylesheet" href="/src/styles/pagination.css">
 </head>
-<body data-style="coastal-editorial">
+<body data-style="coastal-editorial" data-pagination-site="website">
 
   <!-- Persistent DSCG Demo Bar -->
   <aside class="demo-bar" aria-label="DSCG Demo Control Bar">
@@ -724,7 +725,7 @@
     </section>
 
     <!-- Closing & Coordinator Contact -->
-    <section class="closing-section">
+    <section class="closing-section" id="contact">
       <div class="container">
         <h2 class="closing-title">We Can't Wait to Celebrate in Charleston</h2>
         <p class="closing-text">For questions regarding accommodations, logistics, or accessibility, our wedding coordination team is available to assist guests.</p>
@@ -770,6 +771,7 @@
   </dialog>
 
   <!-- Application Script -->
+  <script type="module" src="/src/scripts/pagination.js"></script>
   <script type="module" src="/src/scripts/main.js"></script>
 </body>
 </html>
